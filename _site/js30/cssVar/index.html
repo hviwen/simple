@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>cssVar</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <script>
+    function adaptBackgroundImage() {
+      const windowWidth = window.innerWidth
+      const windowHeight = window.innerHeight
+
+      const aspectRatio = windowWidth / windowHeight
+      const background = document.querySelector('.background')
+
+      if (aspectRatio > 1.75) {
+        background.style.backgroundImage = 'url("./assets/images/landscape_1x2.jpg")'
+      } else if (aspectRatio > 0.80) {
+        background.style.backgroundImage = 'url("./assets/images/portrait_1x1.jpg")'
+      } else {
+        background.style.backgroundImage = 'url("./assets/images/portrait_2x1.jpg")'
+      }
+    }
+
+    window.addEventListener('resize', adaptBackgroundImage);
+
+    window.addEventListener('DOMContentLoaded', function () {
+      window.dispatchEvent(new Event('resize'))
+    })
+  </script>
+  <script src="./index.js" defer></script>
+
+</head>
+<body>
+<div class="background"></div>
+
+<div class="container">
+  <main>
+    <div class="header-tips">
+      <span>Playing with CSS Variables and <span class="h1">JS</span></span>
+    </div>
+
+    <div class="control-space">
+      <div class="range-box">
+        <label for="spacing">Spacing:</label>
+        <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+      </div>
+
+      <div class="range-box">
+        <label for="blur">Blur:</label>
+        <input type="range" name="blur" min="0" max="25" value="0" data-sizing="px">
+      </div>
+
+      <div class="range-box">
+        <label for="base">Base Color</label>
+        <input type="color" name="base" value="#ffc600">
+      </div>
+    </div>
+
+
+    <img class="t-img" src="https://source.unsplash.com/7bwQXzbF6KE/800x500" alt="image">
+  </main>
+  <footer class="footer">
+    mode by <a href="https://github.com/hviwen" target="_blank">&copy;pan</a> 2024
+  </footer>
+</div>
+
+</body>
+</html>

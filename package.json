@@ -10,12 +10,17 @@
     "commitlint": "commitlint -e -V",
     "plop": "plop",
     "stylelint:fix": "stylelint 'src/**/*.{html,vue,css,scss}' --fix",
-    "stylelint:out": "stylelint 'src/**/*.{html,vue,css,scss}' -o .stylelint-output.txt -f string"
+    "stylelint:out": "stylelint 'src/**/*.{html,vue,css,scss}' -o .stylelint-output.txt -f string",
+    "site:start": "npx @11ty/eleventy --serve",
+    "site:watch": "npx @11ty/eleventy --watch",
+    "site：debug": "DEBUG=* npx @11ty/eleventy",
+    "site:build": "npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "pan",
   "license": "ISC",
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "commitizen": "^4.3.0",

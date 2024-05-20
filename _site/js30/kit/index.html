@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>kit</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <script>
+    function adaptBackgroundImage() {
+      const windowWidth = window.innerWidth
+      const windowHeight = window.innerHeight
+
+      const aspectRatio = windowWidth / windowHeight
+      const background = document.querySelector('.background')
+
+      if (aspectRatio > 1.75) {
+        background.style.backgroundImage = 'url("./assets/images/landscape_1x2.jpg")'
+      } else if (aspectRatio > 0.80) {
+        background.style.backgroundImage = 'url("./assets/images/portrait_1x1.jpg")'
+      } else {
+        background.style.backgroundImage = 'url("./assets/images/portrait_2x1.jpg")'
+      }
+    }
+    window.addEventListener('resize', adaptBackgroundImage);
+
+    window.addEventListener('DOMContentLoaded', function () {
+      window.dispatchEvent(new Event('resize'))
+    })
+  </script>
+  <script src="./index.js" defer></script>
+
+</head>
+<body>
+<div class="background"></div>
+
+<div class="container">
+  <main>
+    <div class="key-main">
+      <div data-key="65" class="key">
+        <kbd>A</kbd>
+        <span class="key-tips">Clap</span>
+      </div>
+      <div data-key="83" class="key">
+        <kbd>S</kbd>
+        <span class="key-tips">HiHat</span>
+      </div>
+      <div data-key="68" class="key">
+        <kbd>D</kbd>
+        <span class="key-tips">Kick</span>
+      </div>
+      <div data-key="70" class="key">
+        <kbd>F</kbd>
+        <span class="key-tips">OpenHat</span>
+      </div>
+      <div data-key="71" class="key">
+        <kbd>G</kbd>
+        <span class="key-tips">Boom</span>
+      </div>
+      <div data-key="72" class="key">
+        <kbd>H</kbd>
+        <span class="key-tips">Ride</span>
+      </div>
+      <div data-key="74" class="key">
+        <kbd>J</kbd>
+        <span class="key-tips">Snare</span>
+      </div>
+      <div data-key="75" class="key">
+        <kbd>K</kbd>
+        <span class="key-tips">Tom</span>
+      </div>
+      <div data-key="76" class="key">
+        <kbd>L</kbd>
+        <span class="key-tips">Tink</span>
+      </div>
+    </div>
+
+    <div class="key-footer">
+      <div data-key="32" class="key float">
+        <kbd>Space</kbd>
+        <span class="key-tips">Play</span>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+     mode by <a href="https://github.com/hviwen" target="_blank">&copy;pan</a> 2024
+  </footer>
+</div>
+
+<section>
+  <audio src="./assets/sounds/clap.wav" data-key="65"></audio>
+  <audio src="./assets/sounds/hihat.wav" data-key="83"></audio>
+  <audio src="./assets/sounds/kick.wav" data-key="68"></audio>
+  <audio src="./assets/sounds/openhat.wav" data-key="70"></audio>
+  <audio src="./assets/sounds/boom.wav" data-key="71"></audio>
+  <audio src="./assets/sounds/ride.wav" data-key="72"></audio>
+  <audio src="./assets/sounds/snare.wav" data-key="74"></audio>
+  <audio src="./assets/sounds/tom.wav" data-key="75"></audio>
+  <audio src="./assets/sounds/tink.wav" data-key="76"></audio>
+  <audio src="./assets/sounds/martial.wav" data-key="32"></audio>
+</section>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>clock</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <script>
+    function adaptBackgroundImage() {
+      const windowWidth = window.innerWidth
+      const windowHeight = window.innerHeight
+
+      const aspectRatio = windowWidth / windowHeight
+      const background = document.querySelector('.background')
+
+      if (aspectRatio > 1.75) {
+        background.style.backgroundImage = 'url("./assets/images/landscape_1x2.jpg")'
+      } else if (aspectRatio > 0.80) {
+        background.style.backgroundImage = 'url("./assets/images/portrait_1x1.jpg")'
+      } else {
+        background.style.backgroundImage = 'url("./assets/images/portrait_2x1.jpg")'
+      }
+    }
+
+    window.addEventListener('resize', adaptBackgroundImage);
+
+    window.addEventListener('DOMContentLoaded', function () {
+      window.dispatchEvent(new Event('resize'))
+    })
+  </script>
+  <script src="./index.js" defer></script>
+
+</head>
+<body>
+<div class="background"></div>
+
+<div class="container">
+  <main>
+    <div class="clock">
+      <div class="outer-clock-face">
+        <div class="marking marking-zero">
+          <div class="clock-header-weight"></div>
+          <div class="clock-footer-weight"></div>
+        </div>
+        <div class="marking marking-one">
+          <div class="clock-header"></div>
+          <div class="clock-footer"></div>
+        </div>
+        <div class="marking marking-two">
+          <div class="clock-header"></div>
+          <div class="clock-footer"></div>
+        </div>
+        <div class="marking marking-row">
+          <div class="clock-header-weight"></div>
+          <div class="clock-footer-weight"></div>
+        </div>
+        <div class="marking marking-three">
+          <div class="clock-header"></div>
+          <div class="clock-footer"></div>
+        </div>
+        <div class="marking marking-four">
+          <div class="clock-header"></div>
+          <div class="clock-footer"></div>
+        </div>
+      </div>
+      <div class="clock-face">
+        <div class="hand hand-hour"></div>
+        <div class="hand hand-minute"></div>
+        <div class="hand hand-second"></div>
+      </div>
+      <div class="clock-center">
+
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    mode by <a href="https://github.com/hviwen" target="_blank">&copy;pan</a> 2024
+  </footer>
+</div>
+
+</body>
+</html>
