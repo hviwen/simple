@@ -1,0 +1,1 @@
+export {klona as jsonClone} from 'klona/json'

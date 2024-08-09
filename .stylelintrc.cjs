@@ -18,7 +18,15 @@ module.exports = {
       customSyntax: 'postcss-html',
     },
   ],
-  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts', '**/*.json', '**/*.md', '**/*.yaml'],
+  ignoreFiles: [
+    '**/*.js',
+    '**/*.jsx',
+    '**/*.tsx',
+    '**/*.ts',
+    '**/*.json',
+    '**/*.md',
+    '**/*.yaml'
+  ],
   rules: {
     'font-family-no-missing-generic-family-keyword': null,
     'value-keyword-case': null, // 在 css 中使用 v-bind，不报错

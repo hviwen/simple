@@ -1,0 +1,17 @@
+{
+  "name": "@osiz/color",
+  "version": "1.0.0",
+  "description": "color",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hviwen/simple.git"
+  },
+  "private": true,
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "colord": "^2.9.3",
+    "@osiz/utils": "workspace:*"
+  }
+}

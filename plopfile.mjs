@@ -9,7 +9,8 @@ import {
   js30Generator,
   cssNWGenerator,
   challengeGenerator,
-  infoGenerator
+  infoGenerator,
+  frameworkGenerator
 } from "./plop_templates/prompts/index.mjs";
 
 
@@ -37,4 +38,5 @@ export default function (plop) {
   plop.setGenerator('cssNW', cssNWGenerator)
   plop.setGenerator('challenge', challengeGenerator)
   plop.setGenerator('info', infoGenerator)
+  plop.setGenerator('framework', frameworkGenerator)
 }

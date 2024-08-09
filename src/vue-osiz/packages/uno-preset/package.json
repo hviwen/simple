@@ -1,0 +1,14 @@
+{
+  "name": "@osiz/uno-preset",
+  "version": "1.0.0",
+  "description": "uno-preset",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hviwen/simple.git"
+  },
+  "private": true,
+  "exports": {
+    ".": "./src/index.js"
+  }
+}
