@@ -2,6 +2,7 @@
 import {NConfigProvider, darkTheme} from 'naive-ui';
 import {naiveDateLocales, naiveLocales} from "@/locales/naive.js";
 import {useAppStore} from './store/modules/app';
+import {useThemeStore} from "./store/modules/theme";
 
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
@@ -12,6 +13,11 @@ defineOptions({
 });
 
 const appStore = useAppStore();
+const themeStore = useThemeStore()
+
+const naiveDarkTheme = computed(() => {
+  return themeStore.darkMode ? darkTheme : undefined;
+});
 
 const naiveLocale = computed(() => {
   return naiveLocales[appStore.locale];
@@ -25,6 +31,8 @@ const naiveDateLocale = computed(() => {
 
 <template>
   <NConfigProvider
+      :theme="naiveDarkTheme"
+      :theme-overrides="themeStore.naiveTheme"
       :locale="naiveLocale"
       :date-locale="naiveDateLocale"
       class="h-full"
