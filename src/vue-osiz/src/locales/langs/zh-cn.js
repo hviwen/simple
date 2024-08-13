@@ -121,7 +121,7 @@ const local = {
         button: '按钮风格'
       }
     },
-    sider: {
+    slider: {
       inverted: '深色侧边栏',
       width: '侧边栏宽度',
       collapsedWidth: '侧边栏折叠宽度',

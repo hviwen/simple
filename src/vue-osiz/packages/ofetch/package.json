@@ -1,0 +1,19 @@
+{
+  "name": "@osiz/ofetch",
+  "version": "1.0.0",
+  "description": "oFetch package",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hviwen/simple.git"
+  },
+  "private": true,
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "ofetch": "^1.3.4"
+  }
+}

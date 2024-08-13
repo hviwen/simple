@@ -1,0 +1,13 @@
+{
+  "name": "@osiz/materials",
+  "version": "1.0.0",
+  "description": "materials for vue-osiz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hviwen/simple.git"
+  },
+  "private": true,
+  "exports": {
+    ".": "./src/index.js"
+  }
+}

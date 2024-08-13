@@ -56,7 +56,7 @@ export const useAppStore = defineStore(SetupStoreId.App, () => {
       if (val) {
         localStg.set('backupThemeSettingBeforeIsMobile', {
           layout: 'themeStore.layout.mode',
-          sliderCollapse: 'siderCollapse.value'
+          sliderCollapse: 'sliderCollapse.value'
         })
 
         // themeStore.setThemeLayout('vertical');

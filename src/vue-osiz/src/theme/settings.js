@@ -34,7 +34,7 @@ export const themeSettings = {
     mode: 'chrome'
   },
   fixedHeaderAndTab: true,
-  sider: {
+  slider: {
     inverted: false,
     width: 220,
     collapsedWidth: 64,
@@ -62,7 +62,7 @@ export const themeSettings = {
       },
       boxShadow: {
         header: '0 1px 2px rgb(0, 21, 41, 0.08)',
-        sider: '2px 0 8px 0 rgb(29, 35, 41, 0.05)',
+        slider: '2px 0 8px 0 rgb(29, 35, 41, 0.05)',
         tab: '0 1px 2px rgb(0, 21, 41, 0.08)'
       }
     },

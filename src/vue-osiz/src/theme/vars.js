@@ -27,7 +27,7 @@ export const themeVars = {
   },
   boxShadow: {
     header: 'var(--header-box-shadow)',
-    sider: 'var(--sider-box-shadow)',
+    slider: 'var(--slider-box-shadow)',
     tab: 'var(--tab-box-shadow)'
   }
 }

@@ -121,12 +121,12 @@ const local = {
         button: 'Button'
       }
     },
-    sider: {
-      inverted: 'Dark Sider',
-      width: 'Sider Width',
-      collapsedWidth: 'Sider Collapsed Width',
-      mixWidth: 'Mix Sider Width',
-      mixCollapsedWidth: 'Mix Sider Collapse Width',
+    slider: {
+      inverted: 'Dark Slider',
+      width: 'Slider Width',
+      collapsedWidth: 'Slider Collapsed Width',
+      mixWidth: 'Mix Slider Width',
+      mixCollapsedWidth: 'Mix Slider Collapse Width',
       mixChildMenuWidth: 'Mix Child Menu Width'
     },
     footer: {
