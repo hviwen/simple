@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "commonjs",
+    "outFile": "./",
+    // 将输出文件合并为一个文件
+    "outDir": "./",
+    // 指定输出目录
+    "rootDir": "./",
+    // 用来控制输出目录结构 --outDir.
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "lib",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2015",
+      "dom",
+      "esnext"
+    ]
+  }
+}
